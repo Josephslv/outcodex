@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,600;0,700;1,600;1,700&display=swap');
+@import url('./style_editzone.css');
+
+:root{
+    --widthConfigBoard: 80px;
+    --widthButtonForm: 46px;
+    --colorBoards: #1d1822;
+    --colorBoards: #151119;
+    --shadowBackground: 0px 0px 50px black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    color: white;
+    height: 100%;
+    background-color: #130f0d;
+    background-color: #0e0b12;
+    background-color: #0e0d10;
+    user-select: none;
+}
+
+.container {
+    height: 85vh;
+    margin: calc(15vh / 2) 0px;
+    transition: 0.6s ease-in-out;
+}
+
+@media screen and (max-height: 495px) {
+    .container{
+        height: 90vh;
+        margin: calc(10vh / 2) 0px;
+    }
+}
+@media screen and (max-height: 463px) {
+    .container{
+        height: 97vh;
+        margin: calc(3vh / 2) 0px;
+    }
+}
+
+.board{
+    background-color: var(--colorBoards);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.subtitle{
+    user-select: none;
+    padding: 5px;
+    color: #34ffff;
+    margin-bottom: 7px;
+}
+
+
+/* painel de configurações */
+#configBoard {
+    float: left;
+    display: flex;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+
+    flex-direction: column;
+    border: 1px solid transparent;
+
+    width: var(--widthConfigBoard);
+    height: 90%;
+    /* border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px; */
+    box-shadow: var(--shadowBackground);
+    transform: translateY(-50%);
+}
+#configBoard:hover {
+    border-bottom: 0;
+    /* transition: all 0.4s cubic-bezier(0.58, -0.25, 0.265, 3); Default */
+    animation: loopBorder 1s infinite cubic-bezier(0.58, -0.25, 0.265, 10);
+}
+
+@keyframes loopBorder {
+    from {
+        border: 1px solid rgb(131, 37, 225);
+    } to {
+        border: 1px solid rgb(117, 5, 228);
+    }
+}
+
+.gear-icon{
+    width: 100%;
+    max-height: 10%;
+    font-size: 2.2em;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.definitions{
+    height: 90%;
+}
+
+
+.customizations{
+    margin: 20px 0px;
+}
+
+span{
+    font-size: 0.7em;
+    font-weight: 200;
+}
+
+
+
+.option:nth-child(0){
+    background-color: red !important;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.card.option{
+    cursor: move;
+    padding: 16px 0px;
+    margin: 4px 0px;
+    border-radius: 4px;
+    background: #31314e;    
+    
+}
+
+.opt-top{border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;}
+.opt-btt{border-top-left-radius: 0px; border-top-right-radius: 0px;}
+
+
+.nav-model-1 .card{
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+
+
+
+
+/* css enquanto é apenas uma opção na barra de configs */
+.nav-model-1.option{
+    background-color: #6565a8;
+}
+.nav-model-2.option{
+    background-color: #462e57;
+}
+.header-model-2.option{
+    background-color: #4747b3;
+}
+.content-model-1.option{
+    background-color: #3a3044;
+}
+.footer-model-1.option{
+    background-color: #57532e;
+}
+
+.option > .cardContent{
+    display: none;
+}
+
+
+
+
+
+
+/* customization templates */
+.nav-custom, .header-custom, .content-custom, .footer-custom{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.nav-model-1, .nav-model-2{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #222239;
+}
+.card.nav-model-1{
+    justify-content: end;
+}
+.header-model-1{
+    background-color: #30304a;
+}
+.header-model-2{
+    background-color: #30304a;
+}
+.card.header-model-2{
+    justify-content: end;
+}
+.content-model-1{
+    background-color: #42426a;
+}
+.footer-model-1{
+    background-color: #26263e;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+
+
+
+
+
+#containerBoard {
+    z-index: 99;
+    width: 100%;
+    /* width: calc(100% - var(--widthConfigBoard) - var(--widthButtonForm)); */
+    height: 100%;
+    padding: 0px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#panelBoard, #editBoard {
+    width: 100%;
+    max-width: 500px;
+    margin: 0px auto;
+    padding: 16px;
+    border: 1px solid transparent;
+    box-shadow: var(--shadowBackground);
+}
+#panelBoard{
+    min-height: 305px;
+    height: 57%;
+    margin-bottom: 30px;
+}
+#editBoard {
+    height: fit-content;
+}
+
+#panelBoard:hover, #editBoard:hover {
+    border: 1px solid rgb(131, 37, 225);
+    animation: loopBorder 1s infinite cubic-bezier(0.58, -0.25, 0.265, 10);
+}
+
+.card, .dropzone{
+    transition: 400ms ease-out;
+}
+.dropzone{
+    height: calc(100% - 38px);
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-zone{
+    height: 15%;
+}
+.header-zone{
+    height: 26%;
+}
+.content-zone{
+    height: 47%;
+}
+
+.footer-zone, .navbar-zone{
+    height: 12%;
+}
+
+.editzone{
+    height: calc(100% - 32px);
+}
+
+#downloadButton {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    left: -2px;
+    bottom: 0;
+}
+#myform{
+    width: var(--widthButtonForm);
+    width: 100%;
+    height: 50px;
+    box-shadow: var(--shadowBackground);
+}
+
+#myform button{
+    width: 109%;
+    height: 102%;
+    padding: 20% 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #382c42;
+    background-color: #172828;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #baa8ca;
+    color: #34ffff;
+    border: none;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#myform button:hover{
+    padding-left: 1rem;
+    width: 106%;
+    transition: all 0.4s cubic-bezier(0.58, -0.25, 0.265, 3);
+}
+
+
+
+
+
+
+
+
+
+/* event classes*/
+.is-dragging{
+    cursor: move;
+    opacity: 0.3;
+}
+
+.over{
+    background: #2434629f;
+}
+
+.animation-move{
+    transform: rotate(3deg);
+    transition: 50ms ease-in;
+}
+
+.highlight{
+    background: #212132;
+}
+.highlight.navbar-zone{
+    border: 4px solid #40406170;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.highlight.header-zone{
+    border: 4px solid #4040619a;
+}
+.highlight.content-zone{
+    border: 4px solid #40406196;
+}
+.highlight.footer-zone{
+    border: 4px solid #4040619c;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

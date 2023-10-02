@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>Outcode ャ Nocode</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet"      type="text/css" href="css/style.css">
+        <link rel="stylesheet"      type="text/css" href="css/normalize.css">
+        <meta name="viewport"       content="width=device-width, initial-scale=1.0">
+        <meta name="author"         content="@_jozzphkz">
+        <link rel="icon" href="image/icon.svg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="configBoard" class="board">
+                <i class="fa-solid fa-gears gear-icon"></i>
+                <div class="definitions">
+                    <div class="nav_customizations customizations">
+                        <span>> navbar</span>
+                        <div class="card option opt-top nav-custom nav-model-1" draggable="true">
+                            <div class="cardContent">
+                                ⎯⠀❐⠀⤬
+                            </div>
+                        </div>
+                        <div class="card option opt-btt nav-custom nav-model-2" draggable="true">
+                            <div class="cardContent">
+                                < nav
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header_customizations customizations">
+                        <span>> header</span>
+                        <div class="card option header-custom header-model-1" draggable="true">
+                            <div class="cardContent">header with icon</div>
+                        </div>
+                        <div class="card option header-custom header-model-2" draggable="true">
+                            <div class="cardContent">
+                                header without nothing
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_customizations customizations">
+                        <span>> content</span>
+                        <div class="card option opt-top content-custom content-model-1" draggable="true">
+                            <div class="cardContent">content</div>
+                        </div>
+                    </div>
+                    <div class="footer_customizatins customizations">
+                        <span>> footer</span>
+                        <div class="card option footer-custom footer-model-1" draggable="true">
+                            <div class="cardContent">footer xd</div>
+                        </div>
+                    </div>
+                    
+                    <div id="downloadButton">
+                        <form id="myform" action="/savetemplate" method="POST">
+                            <button>
+                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="containerBoard">
+                <div id="panelBoard" class="board">
+                    <h3 class="subtitle">Outcode Config ャ</h3>
+                    <div class="dropzone">
+                        <div class="navbar-zone"> <!--$$$--></div>
+                        <div class="header-zone"> <!--$$$--></div>
+                        <div class="content-zone"><!--$$$--></div>
+                        <div class="footer-zone"> <!--$$$--></div>
+                    </div>
+                </div>
+                <div id="editBoard" class="board">
+                    <h3 class="subtitle">Edit template</h3>
+                    <div class="editzone">
+                        <div class="navbar-editzone"> <!--$$$--></div>
+                        <div class="header-editzone"> <!--$$$--></div>
+                        <div class="content-editzone"><!--$$$--></div>
+                        <div class="footer-editzone"> <!--$$$--></div>
+                        <span style="padding: 3rem 1rem; color: rgba(114, 255, 255, 0.345);">- under development</span>
+                    </div>
+                </div>
+            </div>
+            <span style="float: right; padding: 1rem 1rem; color: rgba(114, 255, 255, 0.389);">- Beta Version</span>
+        </div>
+    </body>
+    <script src="./script/script.js" defer></script>
+</html>

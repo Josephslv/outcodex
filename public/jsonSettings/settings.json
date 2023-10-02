@@ -1,0 +1,62 @@
+{
+  "pageNavigation": {
+    "background": "",
+    "color": "#fff",
+    "title": "Título da página",
+    "left": {
+      "actions": [
+        {
+          "order": "2",
+          "name": "home",
+          "icon": "ea88",
+          "title": "Texto 3"
+        }
+      ]
+    },
+    "right": {
+      "actions": [
+        {
+          "order": "2",
+          "name": "home",
+          "icon": "ea88",
+          "title": "Texto 3"
+        }
+      ]
+    }
+  },
+  "pageHeader": {
+    "template": "B",
+    "background": "#fff",
+    "logo": "https://mobilex.blob.core.windows.net/files/campinagrande/Banner%20consultas%202.png",
+    "color": "#EE8113",
+    "item": {
+      "publishLevel": 1,
+      "details": [
+        {
+          "order": 0,
+          "value": ""
+        }
+      ],
+      "actionDefault": 0,
+      "actions": [
+        {
+          "order": "0",
+          "name": "home",
+          "icon": "ea39",
+          "title": "Texto 1"
+        }
+      ]
+    }
+  },
+  "pageContent": {
+    "background": "#FFF",
+    "totalPages": 1,
+    "currentPage": 1,
+    "hasGroupBy": false,
+    "groupList": null
+  },
+  "pageFooter": {
+    "color": "#000",
+    "background": "#FFF"
+  }
+}
