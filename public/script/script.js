@@ -1,10 +1,12 @@
 const downloadButton = document.getElementById("myform");
 downloadButton.addEventListener("click", (e) => {
-    var linkDeDownload = document.createElement("a");
+    let linkDeDownload = document.createElement("a");
     // Configurar o URL do link e o nome do arquivo
     linkDeDownload.setAttribute('target', ' _blank')
     linkDeDownload.href = '/json/template_app.json';
-    linkDeDownload.click();
+    setTimeout(() => {
+        linkDeDownload.click();
+    }, 10)
 })
 
 document.addEventListener('DOMContentLoaded', function() {

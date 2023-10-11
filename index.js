@@ -21,7 +21,7 @@ app.get('/', (req, res, ) => {
 app.post('/savetemplate', async (req, res) => {
     const data = await JSON.stringify(req.body.templateJSON)
 
-    fs.writeFile('./public/json/template_app.json', JSON.stringify(data), (error) => {
+    fs.writeFile('./public/json/template_app.json', data, (error) => {
         if(error){
             console.log(`error: ${error}`)
         } else {
